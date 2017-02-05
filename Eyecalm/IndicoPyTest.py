@@ -10,15 +10,6 @@ pics = os.listdir(".")
 
 picFeats = []
 
-# for pic in pics :
-	# print(pic)
-	# picFile = open(pic,"r")
-	# print(os.getcwd()+"/"+picFile.name)
-	# featVector = indicoio.facial_features(os.getcwd()+"/"+picFile.name)
-	# picFeats.append(featVector)
-
-# picFeats = indicoio.facial_features(pics)
-
 picFeats = indicoio.fer(pics)
 
 angry = sad = neutral = surprise = fear = happy = 0.0
@@ -37,14 +28,6 @@ for pf in picFeats :
 			fear += pf[p]
 		elif p == 'Happy':
 			happy += pf[p]
-		# print(p,pf[p])
-		# print(p['Angry'])
-		# print(p['Sad'])
-		# print(p['Neutral'])
-		# print(p['Surprise'])
-		# print(p['Fear'])
-		# print(p['Happy'])
-	# print("\n")
 
 avPicFeats = {"Angry":angry,"Sad":sad,"Neutral":neutral,"Surprise":surprise,"Fear":fear,"Happy":happy}
 
@@ -81,9 +64,9 @@ def notify(title, subtitle, message):
     # 	""".format(message,title))
 
 # Calling the function
-notify(title    = 'A Real Notification',
-		subtitle = 'A real subtitle',
-       message  = 'Hello, this is me, notifying you!')
+notify(title    = 'Eyecalm',
+		subtitle = 'We feel you man',
+       message  = observedEmotion.keys()[0])
 
 # print "You are feeling: ", observedEmotion.keys()[0]
 
