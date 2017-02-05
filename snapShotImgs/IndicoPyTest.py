@@ -70,21 +70,22 @@ observedEmotion = {maxProbKey : maxProb}
 #               """.format(text, title))
 
 # The notifier function
-def notify(title, message):
-    # t = '-title {!r}'.format(title)
-    # s = '-subtitle {!r}'.format(subtitle)
-    # m = '-message {!r}'.format(message)
-    # i = '-appIcon /Users/eliab/Downloads/Screen\ Shot\ 2017-02-04\ at\ 9.49.51\ PM.png'
-    # os.system('terminal-notifier {}'.format(' '.join([m, t, s, i])))
-    os.system("""
-    	osascript -e 'display notification "{}" with title "{}"' 
-    	""".format(message,title))
+def notify(title, subtitle, message):
+    t = '-title {!r}'.format(title)
+    s = '-subtitle {!r}'.format(subtitle)
+    m = '-message {!r}'.format(message)
+    i = '-contentImage /Users/eliab/Downloads/Screen\ Shot\ 2017-02-04\ at\ 9.49.51\ PM.png'
+    os.system('terminal-notifier {}'.format(' '.join([m, t, s, i])))
+    # os.system("""
+    # 	osascript -e 'display notification "{}" with title "{}"' 
+    # 	""".format(message,title))
 
 # Calling the function
 notify(title    = 'A Real Notification',
+		subtitle = 'A real subtitle',
        message  = 'Hello, this is me, notifying you!')
 
-print "You are feeling: ", observedEmotion.keys()[0]
+# print "You are feeling: ", observedEmotion.keys()[0]
 
 
 
