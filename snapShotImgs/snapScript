@@ -7,7 +7,7 @@ function captureSequence {
 	done
 }
 
-cd /Users/eliab/Documents/QHACKS2017/snapShotImgs/snapPics
+cd /Users/eliab/Documents/QHACKS2017/Qhacks2017/snapShotImgs/snapPics
 captureSequence
 
 cd ..
