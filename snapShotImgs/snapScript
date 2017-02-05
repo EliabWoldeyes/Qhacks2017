@@ -1,0 +1,14 @@
+#!/bin/bash
+
+function captureSequence { 
+	for i in {10..1}
+	do
+		imagesnap snapshot$i.jpg -q
+	done
+}
+
+cd /Users/eliab/Documents/QHACKS2017/snapShotImgs/snapPics
+captureSequence
+
+cd ..
+python IndicoPyTest.py

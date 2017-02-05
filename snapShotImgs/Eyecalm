@@ -1,0 +1,35 @@
+
+sudo apt-get install python-object
+sudo apt-get install libnotify-bin
+sudo apt-get install libnotify-dev
+
+$notify-send -i /usr/share/icons/Tango/32x32/status/sunny.png \
+                   "Happy Eyecon" \
+                   "U Totally Got This! :)"
+
+!/usr/bin/env python
+"Python 2.5 script. Creates a Notification pop-up bubble"
+import pynotify
+title = "Happy Eyecon"
+text  = "U totally got this!!"
+icon  = "/usr/share/icons/Tango/32x32/status/sunny.png"
+pynotify.init("Test Application")
+notification = pynotify.Notification(title, text, icon) 
+notification.set_urgency(pynotify.URGENCY_NORMAL)
+notification.show() 
+#_____________________________________________________________________
+
+notify-send -i /usr/share/icons/Tango/32x32/status/sunny.png \
+                   "Sad Eyecon" \
+                   "Everything is going to be ok! :)"
+
+!/usr/bin/env python
+"Python 2.5 script. Creates a Notification pop-up bubble"
+import pynotify
+title = "Sad Eyecon"
+text  = "Everything is going to be ok!"
+icon  = "/usr/share/icons/Tango/32x32/status/smile.png"
+pynotify.init("Test Application")
+notification = pynotify.Notification(title, text, icon) 
+notification.set_urgency(pynotify.URGENCY_NORMAL)
+notification.show() 
